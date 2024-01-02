@@ -1,0 +1,105 @@
+@import '_fonts.scss';
+@import '_variables.scss';
+
+@mixin heading {
+    font-family: "NeueMachina-Regular", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1;
+    color: $main-text-color;
+
+    .highlighted {
+        font-family: "NeueMachina-Ultrabold", sans-serif;
+        font-weight: 800;
+        color: $highlighted-text-color;
+    }
+
+    @media screen and (max-width: 426px) {
+        font-size: 28px;
+    }
+}
+
+@mixin main-text {
+    font-family: "Montserrat-Regular", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    color: $main-text-color;
+
+    .highlighted {
+        font-family: "Montserrat-SemiBold", sans-serif;
+        font-weight: 600;
+        color: $highlighted-text-color;
+    }
+
+    @media screen and (max-width: 426px) {
+        font-size: 16px;
+    }
+}
+
+@mixin button {
+    display: inline-block;
+    min-width: 252px;
+    padding: 12px 24px;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    color: $button-text-color;
+    text-align: center;
+    background: rgba($button-color, 0.5);
+    border: 1px solid $button-color;
+    border-radius: 100px;
+    transition: all ease-out 0.3s;
+
+    &:hover {
+        background: rgba($button-color, 1);
+    }
+
+    @media screen and (max-width: 426px) {
+        font-size: 16px;
+    }
+}
+
+@mixin card {
+    padding: 20px;
+    background: linear-gradient(5deg, rgba($card-color, 0.2) 4.99%, rgba($card-color, 0.00) 100%);
+    border: 1px solid rgba($card-color, 0.2);
+    border-radius: 20px;
+}
+
+@mixin card-heading {
+    font-family: "Montserrat-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    color: $card-heading-color;
+
+    @media screen and (max-width: 426px) {
+        font-size: 16px;
+    }
+}
+
+@mixin level-control {
+    font-family: "NeueMachina-Regular", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1;
+    color: $level-control-color;
+
+    @media screen and (max-width: 426px) {
+        font-size: 28px;
+    }
+}
+
+@mixin level-heading {
+    font-family: "Montserrat-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+    color: $level-heading;
+
+    @media screen and (max-width: 426px) {
+        font-size: 28px;
+    }
+}
