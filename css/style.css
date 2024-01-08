@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: "NeueMachina-Regular";
   src: url("../fonts/NeueMachina-Regular.woff2") format("woff2"), url("../fonts/NeueMachina-Regular.woff") format("woff");
@@ -29,11 +36,35 @@
   font-weight: 700;
 }
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
+  position: relative;
   background: #131313;
+}
+body .lines {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 1400px;
+  padding: 0px 120px;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  pointer-events: none;
+}
+body .lines > div {
+  -ms-flex-preferred-size: 15.2%;
+      flex-basis: 15.2%;
+  outline: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 a {
@@ -54,12 +85,16 @@ p {
   margin: 0px auto;
 }
 
+.header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
 .header__content {
   padding: 14px 20px;
 }
 
 .main__content section {
   padding: 80px 0px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .main__content section h2 {
   margin: 0px 0px 20px;
@@ -109,7 +144,11 @@ p {
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid #ffffff;
   border-radius: 100px;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 .main__content section .button:hover {
   background: white;
@@ -119,64 +158,93 @@ p {
     font-size: 16px;
   }
 }
-.main__content section.welcome {
+.main__content section.welcome .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.main__content section.welcome h2 {
+.main__content section.welcome .content h2 {
   max-width: 630px;
   text-align: center;
 }
-.main__content section.welcome p {
+.main__content section.welcome .content p {
   max-width: 900px;
   margin: 0px 0px 20px;
   text-align: center;
 }
-.main__content section.welcome .screenshot {
+.main__content section.welcome .content .screenshot {
   position: relative;
   margin: 40px 0px 55px;
   padding: 44px 20px 20px;
   background: rgba(255, 255, 255, 0.4);
   border-radius: 20px;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
-.main__content section.welcome .screenshot svg {
+.main__content section.welcome .content .screenshot svg {
   position: absolute;
   left: 20px;
   top: 20px;
 }
-.main__content section.welcome .marketplaces {
+.main__content section.marketplaces {
+  padding-top: 15px;
+}
+.main__content section.marketplaces .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 40px 0px;
 }
-.main__content section.welcome .marketplaces__item {
+.main__content section.marketplaces .content .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 268px;
   height: 80px;
   opacity: 0.5;
 }
-.main__content section.advantages h2 {
+.main__content section.advantages .content h2 {
   text-align: center;
 }
-.main__content section.advantages .cards {
+.main__content section.advantages .content .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-bottom: 40px;
 }
-.main__content section.advantages .card {
-  width: 32%;
+.main__content section.advantages .content .card {
+  width: 32.2%;
   margin-top: 20px;
   padding: 20px;
+  background: -o-linear-gradient(85deg, rgba(255, 255, 255, 0.2) 4.99%, rgba(255, 255, 255, 0) 100%);
   background: linear-gradient(5deg, rgba(255, 255, 255, 0.2) 4.99%, rgba(255, 255, 255, 0) 100%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
 }
-.main__content section.advantages .card h4 {
+.main__content section.advantages .content .card h4 {
   margin: 0px 0px 18px;
   font-family: "Montserrat-Bold", sans-serif;
   font-weight: 700;
@@ -185,24 +253,31 @@ p {
   color: #8FFF00;
 }
 @media screen and (max-width: 426px) {
-  .main__content section.advantages .card h4 {
+  .main__content section.advantages .content .card h4 {
     font-size: 16px;
   }
 }
-.main__content section.are-you-ready {
+.main__content section.are-you-ready .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 150px;
 }
-.main__content section.are-you-ready h2 {
+.main__content section.are-you-ready .content h2 {
   text-align: center;
 }
-.main__content section.are-you-ready p {
+.main__content section.are-you-ready .content p {
   margin-bottom: 20px;
   text-align: center;
 }
-.main__content section.are-you-ready .button {
+.main__content section.are-you-ready .content .button {
   display: inline-block;
   min-width: 252px;
   padding: 12px 24px;
@@ -215,47 +290,59 @@ p {
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid #ffffff;
   border-radius: 100px;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
-.main__content section.are-you-ready .button:hover {
+.main__content section.are-you-ready .content .button:hover {
   background: white;
 }
 @media screen and (max-width: 426px) {
-  .main__content section.are-you-ready .button {
+  .main__content section.are-you-ready .content .button {
     font-size: 16px;
   }
 }
-.main__content section.be-the-best {
+.main__content section.be-the-best .content {
   padding: 100px 0px;
 }
-.main__content section.be-the-best p {
+.main__content section.be-the-best .content p {
   max-width: 720px;
 }
-.main__content section.composition h2 {
+.main__content section.composition .content h2 {
   text-align: center;
 }
-.main__content section.composition .cards {
+.main__content section.composition .content .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-bottom: 60px;
 }
-.main__content section.composition .card {
-  width: 49%;
+.main__content section.composition .content .card {
+  width: 49.1%;
   margin-top: 20px;
   padding: 20px;
+  background: -o-linear-gradient(85deg, rgba(255, 255, 255, 0.2) 4.99%, rgba(255, 255, 255, 0) 100%);
   background: linear-gradient(5deg, rgba(255, 255, 255, 0.2) 4.99%, rgba(255, 255, 255, 0) 100%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
 }
-.main__content section.composition .card > div {
+.main__content section.composition .content .card > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 18px;
 }
-.main__content section.composition .card > div img {
+.main__content section.composition .content .card > div img {
   margin-right: 18px;
 }
-.main__content section.composition .card > div h4 {
+.main__content section.composition .content .card > div h4 {
   font-family: "Montserrat-Bold", sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -263,23 +350,27 @@ p {
   color: #8FFF00;
 }
 @media screen and (max-width: 426px) {
-  .main__content section.composition .card > div h4 {
+  .main__content section.composition .content .card > div h4 {
     font-size: 16px;
   }
 }
-.main__content section.any-level {
+.main__content section.any-level .content {
   padding-bottom: 600px;
 }
-.main__content section.any-level h2 {
+.main__content section.any-level .content h2 {
   text-align: center;
 }
-.main__content section.any-level .level-control {
+.main__content section.any-level .content .level-control {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 20px 50px 55px;
 }
-.main__content section.any-level .level-control::after {
+.main__content section.any-level .content .level-control::after {
   content: "";
   position: absolute;
   left: 50px;
@@ -287,15 +378,21 @@ p {
   top: 40%;
   border-bottom: 1px solid #8FFF00;
 }
-.main__content section.any-level .level-control .selector {
+.main__content section.any-level .content .level-control .selector {
   position: relative;
   z-index: 10;
   background: #131313;
 }
-.main__content section.any-level .level-control .selector span {
+.main__content section.any-level .content .level-control .selector span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 80px;
   height: 80px;
   font-family: "NeueMachina-Regular", sans-serif;
@@ -303,56 +400,61 @@ p {
   font-size: 48px;
   line-height: 1;
   color: #8FFF00;
+  background: -o-linear-gradient(42deg, rgba(143, 255, 0, 0.2) -98.23%, rgba(143, 255, 0, 0) 97.63%);
   background: linear-gradient(48deg, rgba(143, 255, 0, 0.2) -98.23%, rgba(143, 255, 0, 0) 97.63%);
   border: 1px solid #8FFF00;
   border-radius: 20px;
   cursor: pointer;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
 }
 @media screen and (max-width: 426px) {
-  .main__content section.any-level .level-control .selector span {
+  .main__content section.any-level .content .level-control .selector span {
     font-size: 28px;
   }
 }
-.main__content section.any-level .level-control .selector span:hover {
+.main__content section.any-level .content .level-control .selector span:hover {
   color: #131313;
   background: #ffffff;
 }
-.main__content section.any-level .level-control .selector span.selected {
+.main__content section.any-level .content .level-control .selector span.selected {
   color: #131313;
   background: #ffffff;
 }
-.main__content section.any-level .level-control .selector p {
+.main__content section.any-level .content .level-control .selector p {
   position: absolute;
   bottom: -40px;
 }
-.main__content section.any-level .level-control .selector:nth-child(1) p {
+.main__content section.any-level .content .level-control .selector:nth-child(1) p {
   left: -15px;
 }
-.main__content section.any-level .level-control .selector:nth-child(2) p {
+.main__content section.any-level .content .level-control .selector:nth-child(2) p {
   left: -47px;
 }
-.main__content section.any-level .level-control .selector:nth-child(3) p {
+.main__content section.any-level .content .level-control .selector:nth-child(3) p {
   left: -11px;
 }
-.main__content section.any-level .levels {
+.main__content section.any-level .content .levels {
   position: relative;
 }
-.main__content section.any-level .levels .hidden {
+.main__content section.any-level .content .levels .hidden {
   opacity: 0 !important;
 }
-.main__content section.any-level .levels .level {
+.main__content section.any-level .content .levels .level {
   position: absolute;
   top: 80px;
   left: 0;
   right: 0;
   opacity: 1;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-.main__content section.any-level .levels .level-content {
-  max-width: 62%;
+.main__content section.any-level .content .levels .level-content {
+  max-width: 66.1%;
 }
-.main__content section.any-level .levels .level-content h3 {
+.main__content section.any-level .content .levels .level-content h3 {
   margin: 0;
   font-family: "Montserrat-Bold", sans-serif;
   font-weight: 700;
@@ -361,45 +463,58 @@ p {
   color: #ffffff;
 }
 @media screen and (max-width: 426px) {
-  .main__content section.any-level .levels .level-content h3 {
+  .main__content section.any-level .content .levels .level-content h3 {
     font-size: 28px;
   }
 }
-.main__content section.any-level .levels .level-content .cards {
+.main__content section.any-level .content .levels .level-content .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.main__content section.any-level .levels .level-content .card {
+.main__content section.any-level .content .levels .level-content .card {
   position: relative;
-  width: 49%;
+  width: 48.8%;
   margin-top: 18px;
   padding: 20px;
+  background: -o-linear-gradient(85deg, rgba(255, 255, 255, 0.2) 4.99%, rgba(255, 255, 255, 0) 100%);
   background: linear-gradient(5deg, rgba(255, 255, 255, 0.2) 4.99%, rgba(255, 255, 255, 0) 100%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   padding: 56px 20px 20px;
 }
-.main__content section.any-level .levels .level-content .card::after {
+.main__content section.any-level .content .levels .level-content .card::after {
   content: url("../img/switch.svg");
   position: absolute;
   top: 20px;
   right: 20px;
 }
-.main__content section.learn-more {
+.main__content section.learn-more .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 80px;
 }
-.main__content section.learn-more h2 {
+.main__content section.learn-more .content h2 {
   text-align: center;
 }
-.main__content section.learn-more p {
+.main__content section.learn-more .content p {
   margin-bottom: 20px;
   text-align: center;
 }
-.main__content section.learn-more .button {
+.main__content section.learn-more .content .button {
   display: inline-block;
   min-width: 252px;
   padding: 12px 24px;
@@ -412,101 +527,134 @@ p {
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid #ffffff;
   border-radius: 100px;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
-.main__content section.learn-more .button:hover {
+.main__content section.learn-more .content .button:hover {
   background: white;
 }
 @media screen and (max-width: 426px) {
-  .main__content section.learn-more .button {
+  .main__content section.learn-more .content .button {
     font-size: 16px;
   }
 }
 
 @media screen and (max-width: 1024px) {
+  body .lines {
+    padding: 0px 60px;
+  }
   .container {
     padding: 0px 60px;
   }
 }
 @media screen and (max-width: 768px) {
-  .container {
-    padding: 0px 60px;
-  }
-  .main__content section.advantages .cards .card {
+  .main__content section.advantages .content .cards .card {
     width: 49%;
   }
-  .main__content section.composition .card > div {
-    flex-direction: column;
-    align-items: center;
+  .main__content section.composition .content .card > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .main__content section.composition .card > div h4 {
+  .main__content section.composition .content .card > div h4 {
     text-align: center;
   }
-  .main__content section.any-level .levels .level-content {
+  .main__content section.any-level .content .levels .level-content {
     max-width: 100%;
   }
 }
 @media screen and (max-width: 426px) {
+  body .lines {
+    padding: 0px 20px;
+  }
   .container {
     padding: 0px 20px;
   }
   .main__content section {
     padding: 40px 0px 0px;
   }
-  .main__content section.welcome .screenshot {
+  .main__content section.welcome .content .screenshot {
     padding: 32px 10px 10px;
     margin-bottom: 30px;
   }
-  .main__content section.welcome .screenshot svg {
+  .main__content section.welcome .content .screenshot svg {
     top: 14px;
     left: 10px;
   }
-  .main__content section.welcome .marketplaces {
-    flex-direction: column;
+  .main__content section.marketplaces .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .main__content section.advantages .cards {
-    flex-direction: column;
+  .main__content section.advantages .content .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .main__content section.advantages .cards .card {
+  .main__content section.advantages .content .cards .card {
     width: 100%;
   }
-  .main__content section.are-you-ready {
+  .main__content section.are-you-ready .content {
     padding-bottom: 80px;
   }
-  .main__content section.be-the-best {
+  .main__content section.be-the-best .content {
     padding: 50px 0px;
   }
-  .main__content section.composition .cards {
-    flex-direction: column;
+  .main__content section.composition .content .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .main__content section.composition .cards .card {
+  .main__content section.composition .content .cards .card {
     width: 100%;
   }
-  .main__content section.composition .cards .card > div {
-    flex-direction: row;
+  .main__content section.composition .content .cards .card > div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-  .main__content section.composition .cards .card > div h4 {
+  .main__content section.composition .content .cards .card > div h4 {
     text-align: left;
   }
-  .main__content section.any-level .level-control {
+  .main__content section.any-level .content {
+    padding-bottom: 650px;
+  }
+  .main__content section.any-level .content .level-control {
     padding: 20px 0px 55px;
   }
-  .main__content section.any-level .level-control .selector:nth-child(1) p {
+  .main__content section.any-level .content .level-control .selector:nth-child(1) p {
     left: 4px;
   }
-  .main__content section.any-level .level-control .selector:nth-child(2) p {
+  .main__content section.any-level .content .level-control .selector:nth-child(2) p {
     left: -14px;
   }
-  .main__content section.any-level .level-control .selector:nth-child(3) p {
+  .main__content section.any-level .content .level-control .selector:nth-child(3) p {
     left: 6px;
   }
-  .main__content section.any-level .levels .level {
+  .main__content section.any-level .content .levels .level {
     top: 40px;
   }
-  .main__content section.any-level .levels .level-content .cards {
-    flex-direction: column;
+  .main__content section.any-level .content .levels .level-content .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .main__content section.any-level .levels .level-content .cards .card {
+  .main__content section.any-level .content .levels .level-content .cards .card {
     width: 100%;
   }
-}/*# sourceMappingURL=style.css.map */
+}

@@ -1,6 +1,12 @@
 @import '_fonts.scss';
 @import '_variables.scss';
 
+@mixin container {
+    max-width: 1400px;
+    padding: 0px 120px;
+    margin: 0px auto;
+}
+
 @mixin heading {
     font-family: "NeueMachina-Regular", sans-serif;
     font-weight: 400;
@@ -51,6 +57,7 @@
     border: 1px solid $button-color;
     border-radius: 100px;
     transition: all ease-out 0.3s;
+    backdrop-filter: blur(10px);
 
     &:hover {
         background: rgba($button-color, 1);
