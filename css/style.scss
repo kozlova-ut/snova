@@ -8,6 +8,7 @@
 body {
     position: relative;
     background: $background-color;
+    background: $background-color url(../img/noise.png) center / auto;
 
     .lines {
         position: absolute;
@@ -52,6 +53,7 @@ p {
 
     &__content {
         padding: 14px 20px;
+        text-align: center;
     }
 }
 
@@ -80,10 +82,12 @@ p {
             // стили для каждой секции
 
             &.welcome {
+                
                 .content {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    background: url(../img/bg1.png) center / contain no-repeat;
     
                     h2 {
                         max-width: 630px;
@@ -167,6 +171,7 @@ p {
                     flex-direction: column;
                     align-items: center;
                     padding-bottom: 150px;
+                    background: url(../img/bg2.png) top center / contain no-repeat;
                     
                     h2 {
                         text-align: center;
@@ -186,9 +191,21 @@ p {
             &.be-the-best {
 
                 .content {
-                    padding: 100px 0px;
+                    position: relative;
+                    padding: 0px 0px 100px;
+                    background: url(../img/bg3.png) top -50px right 0px / contain no-repeat;
 
-                    p {
+                    &::after {
+                        content: url(../img/arrow.png);
+                        position: absolute;
+                        top: -60px;
+                        right: -110px;
+                        width: 550px;
+                        height: 600px;
+
+                    }
+
+                    h2, p {
                         max-width: 720px;
                     }
                 }   
@@ -259,6 +276,7 @@ p {
                             position: relative;
                             z-index: 10;
                             background: $black;
+                            border-radius: 20px;
     
                             span {
                                 display: flex;
@@ -309,12 +327,23 @@ p {
                         }
     
                         .level {
+                            padding-bottom: 150px;
                             position: absolute;
                             top: 80px;
                             left: 0;
                             right: 0;
                             opacity: 1;
                             transition: all .4s;
+
+                            &-1 {
+                                background: url(../img/bg4.png) top -400px right -100px /cover no-repeat;
+                            }
+                            &-2 {
+                                background: url(../img/bg5.png) top -400px right -100px /cover no-repeat;
+                            }
+                            &-3 {
+                                background: url(../img/bg6.png) top -400px right -100px /cover no-repeat;
+                            }
     
                             &-content {
                                 max-width: 66.1%;
@@ -356,6 +385,7 @@ p {
                     flex-direction: column;
                     align-items: center;
                     padding-bottom: 80px;
+                    background: url(../img/bg7.png) top center / contain no-repeat;
                     
                     h2 {
                         text-align: center;
@@ -393,7 +423,6 @@ p {
     .main {
         &__content {
             section {
-                
                 &.advantages {
                     .content {
                         .cards {
@@ -454,6 +483,7 @@ p {
                 &.welcome {
 
                     .content {
+
                         .screenshot {
                             padding: 32px 10px 10px;
                             margin-bottom: 30px;
