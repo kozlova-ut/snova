@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: "NeueMachina-Regular";
   src: url("../fonts/NeueMachina-Regular.woff2") format("woff2"), url("../fonts/NeueMachina-Regular.woff") format("woff");
@@ -29,7 +36,8 @@
   font-weight: 700;
 }
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -46,12 +54,17 @@ body .lines {
   max-width: 1400px;
   padding: 0px 120px;
   margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   pointer-events: none;
 }
 body .lines > div {
-  flex-basis: 15.2%;
+  -ms-flex-preferred-size: 15.2%;
+      flex-basis: 15.2%;
   outline: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -137,6 +150,8 @@ p {
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid #ffffff;
   border-radius: 100px;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -150,9 +165,16 @@ p {
   }
 }
 .main__content section.welcome .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: url(../img/bg1.png) center/contain no-repeat;
 }
 .main__content section.welcome .content h2 {
@@ -182,15 +204,26 @@ p {
   padding-top: 15px;
 }
 .main__content section.marketplaces .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 40px 0px;
 }
 .main__content section.marketplaces .content .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 268px;
   height: 80px;
   opacity: 0.5;
@@ -199,15 +232,21 @@ p {
   text-align: center;
 }
 .main__content section.advantages .content .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-bottom: 40px;
 }
 .main__content section.advantages .content .card {
   width: 32.2%;
   margin-top: 20px;
   padding: 20px;
+  background: -o-linear-gradient(85deg, rgba(255, 255, 255, 0.2) 4.99%, rgba(255, 255, 255, 0) 100%);
   background: linear-gradient(5deg, rgba(255, 255, 255, 0.2) 4.99%, rgba(255, 255, 255, 0) 100%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
@@ -226,9 +265,16 @@ p {
   }
 }
 .main__content section.are-you-ready .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 150px;
   background: url(../img/bg2.png) top center/contain no-repeat;
 }
@@ -252,6 +298,8 @@ p {
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid #ffffff;
   border-radius: 100px;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -284,22 +332,32 @@ p {
   text-align: center;
 }
 .main__content section.composition .content .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-bottom: 60px;
 }
 .main__content section.composition .content .card {
   width: 49.1%;
   margin-top: 20px;
   padding: 20px;
+  background: -o-linear-gradient(85deg, rgba(255, 255, 255, 0.2) 4.99%, rgba(255, 255, 255, 0) 100%);
   background: linear-gradient(5deg, rgba(255, 255, 255, 0.2) 4.99%, rgba(255, 255, 255, 0) 100%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
 }
 .main__content section.composition .content .card > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 18px;
 }
 .main__content section.composition .content .card > div img {
@@ -325,8 +383,12 @@ p {
 }
 .main__content section.any-level .content .level-control {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 20px 50px 55px;
 }
 .main__content section.any-level .content .level-control::after {
@@ -344,9 +406,15 @@ p {
   border-radius: 20px;
 }
 .main__content section.any-level .content .level-control .selector span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 80px;
   height: 80px;
   font-family: "NeueMachina-Regular", sans-serif;
@@ -354,10 +422,13 @@ p {
   font-size: 48px;
   line-height: 1;
   color: #8FFF00;
+  background: -o-linear-gradient(42deg, rgba(143, 255, 0, 0.2) -98.23%, rgba(143, 255, 0, 0) 97.63%);
   background: linear-gradient(48deg, rgba(143, 255, 0, 0.2) -98.23%, rgba(143, 255, 0, 0) 97.63%);
   border: 1px solid #8FFF00;
   border-radius: 20px;
   cursor: pointer;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
 }
 @media screen and (max-width: 426px) {
@@ -399,6 +470,8 @@ p {
   left: 0;
   right: 0;
   opacity: 1;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
 .main__content section.any-level .content .levels .level-1 {
@@ -427,15 +500,21 @@ p {
   }
 }
 .main__content section.any-level .content .levels .level-content .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .main__content section.any-level .content .levels .level-content .card {
   position: relative;
   width: 48.8%;
   margin-top: 18px;
   padding: 20px;
+  background: -o-linear-gradient(85deg, rgba(255, 255, 255, 0.2) 4.99%, rgba(255, 255, 255, 0) 100%);
   background: linear-gradient(5deg, rgba(255, 255, 255, 0.2) 4.99%, rgba(255, 255, 255, 0) 100%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
@@ -448,9 +527,16 @@ p {
   right: 20px;
 }
 .main__content section.learn-more .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 80px;
   background: url(../img/bg7.png) top center/contain no-repeat;
 }
@@ -474,6 +560,8 @@ p {
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid #ffffff;
   border-radius: 100px;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -500,8 +588,13 @@ p {
     width: 49%;
   }
   .main__content section.composition .content .card > div {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .main__content section.composition .content .card > div h4 {
     text-align: center;
@@ -529,11 +622,19 @@ p {
     left: 10px;
   }
   .main__content section.marketplaces .content {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .main__content section.advantages .content .cards {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .main__content section.advantages .content .cards .card {
     width: 100%;
@@ -545,13 +646,19 @@ p {
     padding: 50px 0px;
   }
   .main__content section.composition .content .cards {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .main__content section.composition .content .cards .card {
     width: 100%;
   }
   .main__content section.composition .content .cards .card > div {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .main__content section.composition .content .cards .card > div h4 {
     text-align: left;
@@ -575,9 +682,12 @@ p {
     top: 40px;
   }
   .main__content section.any-level .content .levels .level-content .cards {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .main__content section.any-level .content .levels .level-content .cards .card {
     width: 100%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
