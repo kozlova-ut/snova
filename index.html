@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>СНОВА</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script defer src="js/main.js"></script>
 
     <link rel="stylesheet" href="css/normalize.css">
@@ -355,5 +356,22 @@
             </div>
         <!-- </div> -->
     </main> 
+    <div class="popup-wrapper">
+        <div class="popup">
+            <span class="heading">Как с вами связаться?</span>
+            <form id="tg">
+                <input type="email" name="email" placeholder="Почта">
+                <input type="tel" name="phone" placeholder="Телефон">
+                <input type="text" name="name" placeholder="Ваше имя">
+                <button>отправить</button>
+            </form>
+            <div class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
+                    <path d="M0.500001 1L16.5 17M16.5 1L0.5 17" stroke="black"/>
+                </svg>
+            </div>
+            <span class="success">Сообщение отправлено</span>
+        </div>
+    </div>
 </body>
 </html>
