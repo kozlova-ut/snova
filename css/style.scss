@@ -49,6 +49,7 @@ p {
 }
 
 .header {
+    background: url(../img/bg/bg.png);
     border-bottom: 1px solid rgba($white, 0.1);
 
     &__content {
@@ -82,12 +83,12 @@ p {
             // стили для каждой секции
 
             &.welcome {
+                background: url(../img/bg/bg-1.png) center / auto no-repeat;
                 
                 .content {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    background: url(../img/bg1.png) center / contain no-repeat;
     
                     h2 {
                         max-width: 630px;
@@ -118,6 +119,7 @@ p {
             }
 
             &.marketplaces {
+                background: url(../img/bg/bg.png);
                 padding-top: 15px;
 
                 .content {
@@ -138,6 +140,7 @@ p {
             }
 
             &.advantages {
+                background: url(../img/bg/bg.png);
 
                 .content {
                     h2 {
@@ -165,14 +168,14 @@ p {
             }
 
             &.are-you-ready {
+                background: url(../img/bg/bg-2.png) center / auto no-repeat;
 
                 .content {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     padding-bottom: 150px;
-                    background: url(../img/bg2.png) top center / contain no-repeat;
-                    
+
                     h2 {
                         text-align: center;
                     }
@@ -189,11 +192,11 @@ p {
             }
 
             &.be-the-best {
+                background: url(../img/bg/bg-3.png) center / auto no-repeat;
 
                 .content {
                     position: relative;
                     padding: 0px 0px 100px;
-                    background: url(../img/bg3.png) top -50px right 0px / contain no-repeat;
 
                     &::after {
                         content: url(../img/arrow.png);
@@ -212,6 +215,7 @@ p {
             }
 
             &.composition {
+                background: url(../img/bg/bg.png);
 
                 .content {
 
@@ -249,6 +253,7 @@ p {
             }
 
             &.any-level {
+                background: url(../img/bg/bg.png);
 
                 .content {
                     padding-bottom: 600px;
@@ -336,13 +341,13 @@ p {
                             transition: all .4s;
 
                             &-1 {
-                                background: url(../img/bg4.png) top -400px right -100px /cover no-repeat;
+                                background: url(../img/bg/bg-41.png) top -400px right -80px /cover no-repeat;
                             }
                             &-2 {
-                                background: url(../img/bg5.png) top -400px right -100px /cover no-repeat;
+                                background: url(../img/bg/bg-42.png) top -400px right -80px /cover no-repeat;
                             }
                             &-3 {
-                                background: url(../img/bg6.png) top -400px right -100px /cover no-repeat;
+                                background: url(../img/bg/bg-43.png) top -400px right -80px /cover no-repeat;
                             }
     
                             &-content {
@@ -380,12 +385,12 @@ p {
             }
 
             &.learn-more {
+                background: url(../img/bg/bg-5.png) center / auto no-repeat;
                 .content {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     padding-bottom: 80px;
-                    background: url(../img/bg7.png) top center / contain no-repeat;
                     
                     h2 {
                         text-align: center;

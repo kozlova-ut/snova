@@ -47,8 +47,8 @@ close.addEventListener('click', () => {
     popup.style.display = 'none';
 })
 
-const TOKEN = "5443287425:AAEj0MA2OYh2GShTdzuKSrttCK2QBuDHUvQ";
-const CHAT_ID = "-1001682187999";
+const TOKEN = "6878410909:AAHboMuXqkI7CYoTvQF2Fa4fxF1Dk6D5EAg";
+const CHAT_ID = "164045285";
 const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 document.getElementById('tg').addEventListener('submit', function(e) {
